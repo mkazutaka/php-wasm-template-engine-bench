@@ -1,0 +1,12 @@
+{
+    "name": "mkazutaka/php-twig",
+    "authors": [
+        {
+            "name": "mkazutaka",
+            "email": "paper.sheet.kami@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "2.12.2"
+    }
+}

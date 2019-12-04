@@ -1,0 +1,11 @@
+[package]
+name = "wasm-template-engine"
+version = "0.1.0"
+authors = ["mkazutaka <paper.sheet.kami@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+askama = "0.8"
