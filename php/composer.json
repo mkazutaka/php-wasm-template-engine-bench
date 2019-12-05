@@ -1,5 +1,5 @@
 {
-    "name": "mkazutaka/php-twig",
+    "name": "mkazutaka/php",
     "authors": [
         {
             "name": "mkazutaka",
@@ -7,6 +7,10 @@
         }
     ],
     "require": {
+        "php-wasm/php-wasm": "^0.5.0",
         "twig/twig": "2.12.2"
+    },
+    "require-dev": {
+        "phpbench/phpbench": "@dev"
     }
 }
