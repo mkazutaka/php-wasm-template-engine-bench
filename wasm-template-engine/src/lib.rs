@@ -15,6 +15,20 @@ pub extern "C" fn hello() -> *mut c_char {
     unsafe { CString::from_vec_unchecked(index.render().unwrap().into_bytes()) }.into_raw()
 }
 
+#[derive(Template)]
+#[template(path = "bench.html")]
+struct BenchTemplate<'a> {
+    title: &'a str,
+}
+
+#[no_mangle]
+pub extern "C" fn bench() -> *mut c_char {
+    let bench = BenchTemplate{
+        title: "this is title"
+    };
+    unsafe { CString::from_vec_unchecked(bench.render().unwrap().into_bytes()) }.into_raw()
+}
+
 #[no_mangle]
 pub extern "C" fn allocate(size: usize) -> *mut c_void {
     let mut buffer = Vec::with_capacity(size);
